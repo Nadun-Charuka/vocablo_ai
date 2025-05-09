@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vocablo_ai/providers/theme_provider.dart';
-import 'package:vocablo_ai/widgets/appbar_widget.dart';
+import 'package:vocablo_ai/features/profile/providers/theme_provider.dart';
+import 'package:vocablo_ai/shared/appbar_widget.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});

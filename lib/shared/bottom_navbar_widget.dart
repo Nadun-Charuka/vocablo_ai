@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:vocablo_ai/constants/colors.dart';
-import 'package:vocablo_ai/screens/translation_screen.dart';
-import 'package:vocablo_ai/screens/word_list_screen.dart';
-import 'package:vocablo_ai/screens/profile_screen.dart';
+import 'package:vocablo_ai/features/translation/screens/translation_screen.dart';
+import 'package:vocablo_ai/features/word_list/screens/word_list_screen.dart';
+import 'package:vocablo_ai/features/profile/screens/profile_screen.dart';
 
 class BottomNavbarWidget extends StatefulWidget {
   const BottomNavbarWidget({super.key});

@@ -59,4 +59,8 @@ class TranslationNotifier extends StateNotifier<String> {
       state = 'Error';
     }
   }
+
+  void reset() {
+    state = '';
+  }
 }

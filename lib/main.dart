@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:vocablo_ai/constants/theme.dart';
-import 'package:vocablo_ai/providers/theme_provider.dart';
-import 'package:vocablo_ai/widgets/bottom_navbar_widget.dart';
+import 'package:vocablo_ai/features/profile/providers/theme_provider.dart';
+
+import 'package:vocablo_ai/shared/bottom_navbar_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

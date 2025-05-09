@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vocablo_ai/widgets/appbar_widget.dart';
+import 'package:vocablo_ai/shared/appbar_widget.dart';
 
 class WordListScreen extends StatelessWidget {
   const WordListScreen({super.key});
