@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:http/http.dart' as http;
 
 // Language model (optional but clean)
@@ -54,10 +55,24 @@ class TranslationNotifier extends StateNotifier<String> {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      state = data['data']['translations'][0]['translatedText'];
+      final translated = data['data']['translations'][0]['translatedText'];
+      state = translated;
     } else {
       state = 'Error';
     }
+  }
+
+  Future<void> saveTranslation(String inputText) async {
+    if (state.isEmpty) return; // No translated text to save
+
+    final lang = ref.read(languageProvider);
+    final box = Hive.box<Map>('translations');
+    final key = '${lang.sourceLang}_$inputText';
+    box.put(key, {
+      'word': inputText,
+      'translated': state,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+    });
   }
 
   void reset() {

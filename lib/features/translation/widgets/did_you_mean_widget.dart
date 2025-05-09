@@ -30,17 +30,18 @@ class DidYouMean extends ConsumerWidget {
                   const SizedBox(width: 8),
                   Text.rich(
                     TextSpan(
-                      text: 'Did you mean ',
+                      text: 'Did you mean  ',
                       children: [
                         TextSpan(
                           text: suggestion,
                           style: const TextStyle(
+                            fontSize: 26,
                             fontWeight: FontWeight.bold,
                             color: Colors.blue,
                             decoration: TextDecoration.underline,
                           ),
                         ),
-                        const TextSpan(text: '?'),
+                        const TextSpan(text: ' ?'),
                       ],
                     ),
                   ),
